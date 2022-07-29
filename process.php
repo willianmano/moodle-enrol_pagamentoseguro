@@ -27,7 +27,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Block requestes outside pagamentoseguro: header("access-control-allow-origin: https://ws.pagamentoseguro.uol.com.br");.
+// Block requestes outside pagamentoseguro: header("access-control-allow-origin: https://ws.pagseguro.uol.com.br");.
 // @codingStandardsIgnoreLine
 require('../../config.php');
 
@@ -57,11 +57,11 @@ $instanceid = optional_param('instanceid', 0, PARAM_INT);
 $userid = optional_param('userid', 0, PARAM_INT);
 
 if (get_config('enrol_pagamentoseguro', 'usesandbox') == 1) {
-    $pagamentosegurobaseurl = 'https://sandbox.pagamentoseguro.uol.com.br';
-    $pagamentosegurowsbaseurl = 'https://ws.sandbox.pagamentoseguro.uol.com.br';
+    $pagamentosegurobaseurl = 'https://sandbox.pagseguro.uol.com.br';
+    $pagamentosegurowsbaseurl = 'https://ws.sandbox.pagseguro.uol.com.br';
 } else {
-    $pagamentosegurobaseurl = 'https://pagamentoseguro.uol.com.br';
-    $pagamentosegurowsbaseurl = 'https://ws.pagamentoseguro.uol.com.br';
+    $pagamentosegurobaseurl = 'https://pagseguro.uol.com.br';
+    $pagamentosegurowsbaseurl = 'https://ws.pagseguro.uol.com.br';
 }
 
 $plugin = enrol_get_plugin('pagamentoseguro');
